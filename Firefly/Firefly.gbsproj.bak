@@ -27,10 +27,100 @@
                     "collisionGroup": "1",
                     "script": [
                         {
+                            "id": "9bc9ea22-23ff-44a3-a9be-73e15fa37d91",
+                            "command": "EVENT_TIMER_DISABLE",
+                            "args": {
+                                "__collapse": false
+                            }
+                        },
+                        {
                             "id": "6ab18018-35ba-46ce-a4a4-d96d48cb0816",
                             "command": "EVENT_ACTOR_HIDE",
                             "args": {
                                 "actorId": "$self$"
+                            }
+                        },
+                        {
+                            "id": "fb0a7033-7696-4c60-8a8f-8921e413c81f",
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "L1",
+                                "operation": "set",
+                                "other": "rnd",
+                                "vectorY": "L0",
+                                "value": "1",
+                                "minValue": 1,
+                                "maxValue": 18,
+                                "clamp": false
+                            }
+                        },
+                        {
+                            "id": "ea6ebd1e-79ce-4439-a91e-f8177aec885f",
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "L2",
+                                "operation": "set",
+                                "other": "rnd",
+                                "vectorY": "L0",
+                                "value": "1",
+                                "minValue": 1,
+                                "maxValue": 17,
+                                "clamp": false
+                            }
+                        },
+                        {
+                            "id": "cc789957-e5c3-45ef-a6eb-c2b5a278a6db",
+                            "command": "EVENT_WAIT",
+                            "args": {
+                                "time": 0.5
+                            }
+                        },
+                        {
+                            "id": "93a9588c-9f17-4fd7-82e2-22226c4db12b",
+                            "command": "EVENT_ACTOR_MOVE_TO",
+                            "args": {
+                                "actorId": "d5acfe25-456c-455b-a631-d7151d9a1356",
+                                "x": {
+                                    "type": "variable",
+                                    "value": "L1"
+                                },
+                                "y": {
+                                    "type": "variable",
+                                    "value": "L2"
+                                },
+                                "moveType": "horizontal",
+                                "useCollisions": false
+                            }
+                        },
+                        {
+                            "id": "09339918-cf9b-49d0-b4cf-039527f286a2",
+                            "command": "EVENT_ACTOR_SHOW",
+                            "args": {
+                                "actorId": "d5acfe25-456c-455b-a631-d7151d9a1356"
+                            }
+                        },
+                        {
+                            "id": "bd31117c-4848-4bfa-a3cc-1f7f2d42f418",
+                            "command": "EVENT_SET_TIMER_SCRIPT",
+                            "args": {
+                                "duration": 5,
+                                "__scriptTabs": "end"
+                            },
+                            "children": {
+                                "script": [
+                                    {
+                                        "id": "d70f899e-4c7e-4200-9acd-74bc481177fd",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": "game over",
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "bf2c35ff-21b7-4379-87d7-8ebb4ae13082",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
                             }
                         },
                         {
@@ -108,7 +198,8 @@
                     "command": "EVENT_PLAYER_SET_SPRITE",
                     "args": {
                         "spriteSheetId": "a15beeeb-a739-4720-92c8-1d4239124750",
-                        "persist": false
+                        "persist": false,
+                        "__collapse": false
                     }
                 },
                 {
@@ -3958,6 +4049,14 @@
         {
             "id": "4912bee2-387a-472f-ae4f-6679b6149517__L0",
             "name": "Menu Choice"
+        },
+        {
+            "id": "d5acfe25-456c-455b-a631-d7151d9a1356__L1",
+            "name": "x movement"
+        },
+        {
+            "id": "d5acfe25-456c-455b-a631-d7151d9a1356__L2",
+            "name": "Y movement"
         }
     ],
     "engineFieldValues": [
@@ -3967,16 +4066,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "382961a1-e615-4b92-92a7-f1a791b50b7a",
+        "startSceneId": "1b7f9ffd-2bbb-470b-9189-c2ac435d2a55",
         "playerSpriteSheetId": "a15beeeb-a739-4720-92c8-1d4239124750",
-        "startX": 0,
-        "startY": 0,
+        "startX": 8,
+        "startY": 8,
         "startMoveSpeed": 1,
         "startAnimSpeed": 4,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 154,
+        "worldScrollX": 271,
         "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": true,

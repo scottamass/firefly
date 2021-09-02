@@ -41,6 +41,13 @@
                             }
                         },
                         {
+                            "id": "3c216b36-2ac7-4fa5-ab84-4b3706c88438",
+                            "command": "EVENT_INC_VALUE",
+                            "args": {
+                                "variable": "0"
+                            }
+                        },
+                        {
                             "id": "fb0a7033-7696-4c60-8a8f-8921e413c81f",
                             "command": "EVENT_VARIABLE_MATH",
                             "args": {
@@ -50,7 +57,7 @@
                                 "vectorY": "L0",
                                 "value": "1",
                                 "minValue": 1,
-                                "maxValue": 18,
+                                "maxValue": 17,
                                 "clamp": false
                             }
                         },
@@ -109,10 +116,17 @@
                             "children": {
                                 "script": [
                                     {
+                                        "id": "c494bd0d-4eba-4548-b364-ab2f459631e0",
+                                        "command": "EVENT_TIMER_DISABLE",
+                                        "args": {}
+                                    },
+                                    {
                                         "id": "d70f899e-4c7e-4200-9acd-74bc481177fd",
                                         "command": "EVENT_TEXT",
                                         "args": {
-                                            "text": "game over",
+                                            "text": [
+                                                "game over you\nscored $00$"
+                                            ],
                                             "avatarId": ""
                                         }
                                     },
@@ -222,6 +236,17 @@
                                 "command": "EVENT_END"
                             }
                         ]
+                    }
+                },
+                {
+                    "id": "67737a14-ccd8-42b4-9e33-5f1ce0e339aa",
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "0",
+                        "value": {
+                            "type": "number",
+                            "value": 0
+                        }
                     }
                 },
                 {
@@ -4015,7 +4040,7 @@
     "variables": [
         {
             "id": "0",
-            "name": "Quest1"
+            "name": "Score"
         },
         {
             "id": "1",
@@ -4131,7 +4156,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 1598,
-        "worldScrollY": 110,
+        "worldScrollY": 0,
         "zoom": 300,
         "customColorsEnabled": true,
         "customHead": "",

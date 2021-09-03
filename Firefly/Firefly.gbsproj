@@ -1221,7 +1221,7 @@
             "id": "4912bee2-387a-472f-ae4f-6679b6149517",
             "name": "Title Screen",
             "backgroundId": "a509b5ba-603b-45a7-8352-90bcde942eac",
-            "x": 341,
+            "x": 343.6666666666667,
             "y": 76,
             "width": 20,
             "height": 18,
@@ -1321,7 +1321,7 @@
                                                 "actorId": "f6cf0974-41b9-4bce-aab1-63d19ab76b60",
                                                 "x": {
                                                     "type": "number",
-                                                    "value": 14
+                                                    "value": 13
                                                 },
                                                 "y": {
                                                     "type": "number",
@@ -1330,6 +1330,28 @@
                                                 "moveType": "horizontal",
                                                 "useCollisions": false,
                                                 "__collapse": false
+                                            }
+                                        },
+                                        {
+                                            "id": "18e96138-9f43-4a17-a17b-3ffe1b762bbf",
+                                            "command": "EVENT_ACTOR_HIDE",
+                                            "args": {
+                                                "actorId": "d85e1489-464d-4555-a446-e2f9cbf99214"
+                                            }
+                                        },
+                                        {
+                                            "id": "2557b090-b58e-4443-8a91-929b4dd1e05f",
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "speed fix applied below"
+                                            }
+                                        },
+                                        {
+                                            "id": "229323a5-3b0c-4c9e-9667-bfdfa38896c9",
+                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                            "args": {
+                                                "actorId": "$self$",
+                                                "speed": 1
                                             }
                                         },
                                         {
@@ -2495,8 +2517,8 @@
                 0
             ],
             "id": "a5f430d1-da9c-4313-934a-79da3c40bbdc",
-            "x": 1019,
-            "y": 931,
+            "x": 791,
+            "y": 83.00000000000003,
             "actors": [],
             "triggers": [],
             "script": [
@@ -4452,9 +4474,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 251,
+        "worldScrollX": 0,
         "worldScrollY": 0,
-        "zoom": 150,
+        "zoom": 75,
         "customColorsEnabled": true,
         "customHead": "",
         "defaultBackgroundPaletteIds": [

@@ -369,28 +369,6 @@
                     }
                 },
                 {
-                    "id": "e8f3fc03-a428-4a97-b72e-b5f58a4d86c6",
-                    "command": "EVENT_IF_COLOR_SUPPORTED",
-                    "args": {
-                        "__collapseElse": false,
-                        "__comment": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "id": "d9cbf0a3-d277-470a-b9a8-843057be5877",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "5120a905-772d-486f-9012-b79a9930e167",
-                                "command": "EVENT_END"
-                            }
-                        ]
-                    }
-                },
-                {
                     "id": "67737a14-ccd8-42b4-9e33-5f1ce0e339aa",
                     "command": "EVENT_SET_VALUE",
                     "args": {

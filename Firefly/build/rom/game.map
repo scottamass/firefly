@@ -90,7 +90,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
      00000200  s__CODE   |    000002FC  l__BASE   |    000005AD  l__GSINIT
      00000B1E  l__CODE_7 |    00000E44  l__DATA   |    00001F3C  l__CODE_5
      00002B8D  l__CODE   |    00002D8D  s__HOME   |    00002E73  s__BASE  
-     00002EEF  l__CODE_6 |    00002FB6  l__CODE_4 |    0000316F  s__CODE_0
+     00002F6D  l__CODE_6 |    00002FB6  l__CODE_4 |    0000316F  s__CODE_0
      0000316F  s__GSINIT |    0000316F  s__LIT    |    0000343F  l__CODE_1
      0000371C  s__GSFINA |    0000C000  _shadow_O |    0000C0A0  s__DATA  
      0000CEE4  s__BSS    |    0000CF1E  s__HEAP   |    0000E000  .STACK   
@@ -585,7 +585,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE_6                00064000    00002EEF =       12015. bytes (REL,CON)
+_CODE_6                00064000    00002F6D =       12141. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    

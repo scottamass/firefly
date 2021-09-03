@@ -1286,50 +1286,101 @@
                     "command": "EVENT_AWAIT_INPUT",
                     "args": {
                         "input": [
-                            "a",
-                            "b",
                             "start",
-                            "select"
+                            "select",
+                            "a",
+                            "b"
+                        ],
+                        "__comment": true
+                    }
+                },
+                {
+                    "id": "0157d2eb-ce04-422f-a865-739a7a3f4bbe",
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "b",
+                            "a",
+                            "start"
+                        ],
+                        "persist": false,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "19a94599-0006-4e3f-9049-c5087d230ed8",
+                                "command": "EVENT_LOOP",
+                                "args": {},
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "ee770707-51fe-41f2-b20c-567276372fbe",
+                                            "command": "EVENT_ACTOR_MOVE_TO",
+                                            "args": {
+                                                "actorId": "f6cf0974-41b9-4bce-aab1-63d19ab76b60",
+                                                "x": {
+                                                    "type": "number",
+                                                    "value": 14
+                                                },
+                                                "y": {
+                                                    "type": "number",
+                                                    "value": 10
+                                                },
+                                                "moveType": "horizontal",
+                                                "useCollisions": false,
+                                                "__collapse": false
+                                            }
+                                        },
+                                        {
+                                            "id": "cbdfe053-5fec-40c0-a17f-31158fc2012b",
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "1b7f9ffd-2bbb-470b-9189-c2ac435d2a55",
+                                                "x": 8,
+                                                "y": 8,
+                                                "direction": "",
+                                                "fadeSpeed": "2"
+                                            }
+                                        },
+                                        {
+                                            "id": "bf72540e-d33a-41fd-9538-b51dc0f70623",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "3b89bc28-4b85-4cd7-8a61-49fcceb17d0b",
+                                "command": "EVENT_END"
+                            }
                         ]
                     }
                 },
                 {
-                    "id": "19a94599-0006-4e3f-9049-c5087d230ed8",
-                    "command": "EVENT_LOOP",
-                    "args": {},
+                    "id": "35f10536-b95b-4773-8b8e-23e7b9262a57",
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "select"
+                        ],
+                        "persist": false,
+                        "__scriptTabs": "press"
+                    },
                     "children": {
                         "true": [
                             {
-                                "id": "ee770707-51fe-41f2-b20c-567276372fbe",
-                                "command": "EVENT_ACTOR_MOVE_TO",
+                                "id": "0ba5bee8-8bdd-4c75-a1e9-3a1683eddad8",
+                                "command": "EVENT_TEXT",
                                 "args": {
-                                    "actorId": "f6cf0974-41b9-4bce-aab1-63d19ab76b60",
-                                    "x": {
-                                        "type": "number",
-                                        "value": 14
-                                    },
-                                    "y": {
-                                        "type": "number",
-                                        "value": 10
-                                    },
-                                    "moveType": "horizontal",
-                                    "useCollisions": false,
-                                    "__collapse": false
+                                    "text": [
+                                        "V0.5.2"
+                                    ],
+                                    "avatarId": ""
                                 }
                             },
                             {
-                                "id": "cbdfe053-5fec-40c0-a17f-31158fc2012b",
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "1b7f9ffd-2bbb-470b-9189-c2ac435d2a55",
-                                    "x": 8,
-                                    "y": 8,
-                                    "direction": "",
-                                    "fadeSpeed": "2"
-                                }
-                            },
-                            {
-                                "id": "bf72540e-d33a-41fd-9538-b51dc0f70623",
+                                "id": "768d1ada-b79b-4770-9314-70b6a29098e4",
                                 "command": "EVENT_END"
                             }
                         ]
@@ -4401,7 +4452,7 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 668,
+        "worldScrollX": 251,
         "worldScrollY": 0,
         "zoom": 150,
         "customColorsEnabled": true,

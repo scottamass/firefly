@@ -2439,7 +2439,9 @@
                                             "id": "3cccb5bd-0586-4fec-b3ff-5f186b638a8c",
                                             "command": "EVENT_TEXT",
                                             "args": {
-                                                "text": "Option 2"
+                                                "text": [
+                                                    "feature coming\nsoon"
+                                                ]
                                             }
                                         },
                                         {
@@ -4764,7 +4766,7 @@
                                                     "args": {
                                                         "variable": "L4",
                                                         "operator": "==",
-                                                        "comparator": 10,
+                                                        "comparator": 9,
                                                         "__collapseElse": false,
                                                         "__comment": false,
                                                         "__disableElse": true,

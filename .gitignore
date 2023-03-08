@@ -13,3 +13,9 @@ Firefly/build/web/rom/README.md
 Firefly/build/web/rom/game.gb
 Firefly/build/web/js/script.js
 Firefly/.DS_Store
+.DS_Store
+.DS_Store
+Firefly/build/rom/game.gb
+Firefly/build/rom/game.noi
+.gitignore
+Firefly/build/rom/game.ihx

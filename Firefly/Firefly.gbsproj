@@ -1886,7 +1886,11 @@
                 "8e265483-b291-4284-9402-fd0922a6072b"
             ],
             "type": "TOPDOWN",
-            "symbol": "scene_title_screen"
+            "symbol": "scene_title_screen",
+            "spritePaletteIds": [
+                "default-ui",
+                "default-bg-5"
+            ]
         },
         {
             "name": "Dream",
@@ -3221,14 +3225,33 @@
                             "value": 0
                         }
                     }
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "",
+                        "avatarId": "",
+                        "__comment": true
+                    },
+                    "id": "a2d1c0f2-2ce9-4d2c-8a59-a944694ad14f"
+                },
+                {
+                    "command": "PT_EVENT_BACKGROUND_TEXT",
+                    "args": {
+                        "text": "score:$10$",
+                        "x": 2,
+                        "y": 3,
+                        "__comment": true
+                    },
+                    "id": "ec6cb200-f880-4b8d-aa67-3a379b7b8a67"
                 }
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "492ac27d-2a6f-40e2-bf46-b2a326b8f169",
-            "x": 568.0000000000001,
-            "y": 259.2,
+            "x": 525.1428571428576,
+            "y": 236.9142857142856,
             "actors": [
                 {
                     "name": "",
@@ -3243,6 +3266,41 @@
                     "isPinned": false,
                     "collisionGroup": "1",
                     "script": [
+                        {
+                            "id": "1f492776-4ba5-4611-88ee-b2808184d921",
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "0",
+                                "operation": "add",
+                                "other": "var",
+                                "vectorY": "L0",
+                                "value": "1",
+                                "minValue": "0",
+                                "maxValue": "255",
+                                "clamp": false
+                            }
+                        },
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "layout",
+                                "minHeight": 2,
+                                "maxHeight": 2,
+                                "position": "bottom",
+                                "showBorder": false,
+                                "clearPrevious": true,
+                                "textX": 0,
+                                "textY": 0,
+                                "textHeight": 1,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "score :$00$"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "c449ea67-c6e2-44d9-aae2-a71eefeec7d4"
+                        },
                         {
                             "id": "fefc3e46-f24d-473d-9858-61f86e4ab7d2",
                             "command": "EVENT_SET_INPUT_SCRIPT",
@@ -3274,20 +3332,6 @@
                             "command": "EVENT_ACTOR_DEACTIVATE",
                             "args": {
                                 "actorId": "6a4139fd-4246-454a-a414-bf45e6f59834"
-                            }
-                        },
-                        {
-                            "id": "1f492776-4ba5-4611-88ee-b2808184d921",
-                            "command": "EVENT_VARIABLE_MATH",
-                            "args": {
-                                "vectorX": "0",
-                                "operation": "add",
-                                "other": "var",
-                                "vectorY": "L0",
-                                "value": "1",
-                                "minValue": "0",
-                                "maxValue": "255",
-                                "clamp": false
                             }
                         },
                         {
@@ -3479,9 +3523,41 @@
                                 ],
                                 "false": []
                             }
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "",
+                                "x": 1,
+                                "y": 1
+                            },
+                            "id": "7cc4c92c-0ce1-47bb-addc-98ae54db5b13"
                         }
                     ],
                     "startScript": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "layout",
+                                "minHeight": 2,
+                                "maxHeight": 2,
+                                "position": "top",
+                                "showBorder": false,
+                                "clearPrevious": true,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 1,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "score :$00$"
+                                ],
+                                "avatarId": "",
+                                "__collapse": false,
+                                "__comment": true
+                            },
+                            "id": "f9917d9f-c195-4523-8f89-66973b2464e9"
+                        },
                         {
                             "id": "e6f6bb3c-cc8e-4f19-a573-0fffe5909fee",
                             "command": "EVENT_SET_INPUT_SCRIPT",
@@ -3528,9 +3604,52 @@
                                     "value": 0
                                 }
                             }
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Score: $8$",
+                                "x": 2,
+                                "y": 2,
+                                "__comment": true
+                            },
+                            "id": "8a230314-c1cd-4ba7-8fdb-f86880dc6c76"
                         }
                     ],
                     "updateScript": [
+                        {
+                            "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                            "args": {
+                                "__scriptTabs": "layout",
+                                "minHeight": 2,
+                                "maxHeight": 2,
+                                "position": "bottom",
+                                "showBorder": false,
+                                "clearPrevious": true,
+                                "textX": 0,
+                                "textY": 0,
+                                "textHeight": 1,
+                                "closeWhen": "notModal",
+                                "closeButton": "a",
+                                "text": [
+                                    "score :$00$"
+                                ],
+                                "avatarId": "",
+                                "__comment": true
+                            },
+                            "id": "cf403c02-26b8-4f12-8806-33209cf3555b"
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "score :$9$ $4$ $10$ $11$",
+                                "x": 1,
+                                "y": 1,
+                                "__comment": true,
+                                "__collapse": false
+                            },
+                            "id": "6bd22df8-3e86-4f71-8239-b72f50646b2b"
+                        },
                         {
                             "id": "64851cd8-120c-48d5-b4a8-907d2afddb79",
                             "command": "EVENT_IF_VALUE",
@@ -3538,7 +3657,8 @@
                                 "variable": "L5",
                                 "operator": ">=",
                                 "comparator": 2,
-                                "__collapseElse": false
+                                "__collapseElse": false,
+                                "__collapse": true
                             },
                             "children": {
                                 "true": [
@@ -3642,11 +3762,11 @@
                             "args": {
                                 "variable": "L5",
                                 "choices": 3,
-                                "__collapseCase0": false,
+                                "__collapseCase0": true,
                                 "value0": 1,
-                                "__collapseCase1": false,
+                                "__collapseCase1": true,
                                 "value1": 2,
-                                "__collapseCase2": false,
+                                "__collapseCase2": true,
                                 "value2": 3,
                                 "__collapseCase3": false,
                                 "value3": 4,
@@ -4077,7 +4197,8 @@
                     "id": "6a4139fd-4246-454a-a414-bf45e6f59834",
                     "x": 14,
                     "y": 8,
-                    "symbol": "actor_3"
+                    "symbol": "actor_3",
+                    "persistent": false
                 }
             ],
             "triggers": [
@@ -4238,7 +4359,11 @@
                     "symbol": "trigger_5"
                 }
             ],
-            "symbol": "scene_night_sky_test_world"
+            "symbol": "scene_night_sky_test_world",
+            "spritePaletteIds": [
+                "default-ui",
+                "default-bg-5"
+            ]
         }
     ],
     "backgrounds": [
@@ -14375,9 +14500,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 396,
-        "worldScrollY": 54,
-        "zoom": 175,
+        "worldScrollX": 85,
+        "worldScrollY": 2,
+        "zoom": 100.4781069457531,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
